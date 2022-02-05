@@ -8,7 +8,6 @@ namespace LinkedList
 {
     internal class LinkedList1
     {
-  
         internal Node head;
         internal void Add(int data)
         {
@@ -28,6 +27,21 @@ namespace LinkedList
             }
             Console.Write("\n {0} inserted into linked list", node.data);
         }
+        public void AddinreverseOrder(int data)
+        {
+            Node newNode = new Node(data);
+            if (this.head == null)
+            {
+                this.head = newNode;
+            }
+            else
+            {
+                Node temp = this.head;
+                head = newNode;
+                head.next = temp;
+            }
+            Console.Write("\n {0} inserted into linked list", newNode.data);
+        }
         internal void Display()
         {
             Console.Write("\n Data of linked list : ");
@@ -46,6 +60,3 @@ namespace LinkedList
         }
     }
 }
-    
-    
-
